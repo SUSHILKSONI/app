@@ -1,8 +1,12 @@
 import streamlit as st
 import pickle
+import os
+
+
+
 
 # Load the trained model
-model = pickle.load(open('C:\\Users\\SHIVALI SONI\\Downloads\\py-master\\ML\\2_linear_reg_multivariate\\salary_predictor_project\\model\\salary_predictor.pkl', 'rb'))
+model = pickle.load(open(os.path.join('model', 'salary_predictor.pkl'), 'rb'))
 
 st.title('Salary Predictor App')
 
